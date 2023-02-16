@@ -26,7 +26,7 @@ function Income() {
     };
 
     return (
-        <Box rounded="md" maxW="400px" p={4} borderWidth="1px" borderRadius="xl" color='red.200'>
+        <Box rounded="md" maxW="400px" p={4} borderWidth="1px" borderRadius="xl">
             <form>
             {/* === Income Type === */}
                 <FormControl id="incomeType" mt="4">
