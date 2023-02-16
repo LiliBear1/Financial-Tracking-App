@@ -2,7 +2,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Routes,
 } from "react-router-dom";
@@ -18,12 +17,10 @@ function App() {
       <Router>
         <Navigation />
         <Routes>
-          {/* <Switch> */}
           <Route path="/" element={<Home />} />
           <Route path="/expenses" element={<Expenses />} />
           <Route path="/income" element={<Income />} />
           <Route path="/savings" element={<Savings />} />
-          {/* </Switch> */}
         </Routes>
       </Router>
     </div>
