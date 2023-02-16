@@ -2,7 +2,7 @@ import React from 'react'
 import {
     Tab, Tabs, TabList, TabPanel, TabPanels,
     Stat, StatLabel, StatNumber, StatHelpText,
-    Box, Table, Tr, Th, Td, Tbody, Thead, Thread, TableCaption, TableContainer, Tfoot
+    Table, Tr, Td, Tbody, TableContainer
 } from "@chakra-ui/react";
 function Savings() {
     return (
@@ -23,15 +23,15 @@ function Savings() {
                                 <Tbody>
                                     {/* Line 1 */}
                                     <Tr>
-                                        <Td>Salary</Td>
-                                        <Td>£2,500.00</Td>
-                                        <Td>01 September 2023</Td>
+                                        <Td width="33%">Salary</Td>
+                                        <Td width="33%">£2,500.00</Td>
+                                        <Td width="33%">01 February 2023</Td>
                                     </Tr>
                                     {/* Line 2 */}
                                     <Tr>
-                                        <Td>Bonus</Td>
-                                        <Td>£1,200.00</Td>
-                                        <Td>06 September 2023</Td>
+                                        <Td width="33%">Bonus</Td>
+                                        <Td width="33%">£1,200.00</Td>
+                                        <Td width="33%">06 February 2023</Td>
                                     </Tr>
                                 </Tbody>
                             </Table>
@@ -51,33 +51,33 @@ function Savings() {
                                 <Tbody>
                                      {/* Line 1 */}
                                     <Tr>
-                                        <Td>Transportation</Td>
-                                        <Td>£7.90</Td>
-                                        <Td>13 September 2023</Td>
+                                        <Td width="33%">Transportation</Td>
+                                        <Td width="33%">£7.90</Td>
+                                        <Td width="33%">13 February 2023</Td>
                                     </Tr>
                                     {/* Line 2 */}
                                     <Tr>
-                                        <Td>Food</Td>
-                                        <Td>£13.00</Td>
-                                        <Td>13 September 2023</Td>
+                                        <Td width="33%">Food</Td>
+                                        <Td width="33%">£13.00</Td>
+                                        <Td width="33%">13 February 2023</Td>
                                     </Tr>
                                     {/* Line 3 */}
                                     <Tr>
-                                        <Td>Fun</Td>
-                                        <Td>£35.00</Td>
-                                        <Td>13 September 2023</Td>
+                                        <Td width="33%">Fun</Td>
+                                        <Td width="33%">£35.00</Td>
+                                        <Td width="33%">13 February 2023</Td>
                                     </Tr>
                                     {/* Line 4 */}
                                     <Tr>
-                                        <Td>Transportation</Td>
-                                        <Td>£7.90</Td>
-                                        <Td>13 September 2023</Td>
+                                        <Td width="33%">Transportation</Td>
+                                        <Td width="33%">£7.90</Td>
+                                        <Td width="33%">13 February 2023</Td>
                                     </Tr>
                                     {/* Line 5 */}
                                     <Tr>
-                                        <Td>Groceries</Td>
-                                        <Td>£23.37</Td>
-                                        <Td>13 September 2023</Td>
+                                        <Td width="33%">Groceries</Td>
+                                        <Td width="33%">£23.37</Td>
+                                        <Td width="33%">13 February 2023</Td>
                                     </Tr>
                                 </Tbody>
                             </Table>
@@ -88,8 +88,8 @@ function Savings() {
                 {/* Add js to calculate total balance on hand */}
                 <Stat>
                     <StatLabel>Balance:</StatLabel>
-                    <StatNumber>£0.00</StatNumber>
-                    <StatHelpText>Feb 12 - Feb 28</StatHelpText>
+                    <StatNumber>£3,623.77</StatNumber>
+                    <StatHelpText>Feb 01 - Feb 28</StatHelpText>
                 </Stat>
             </Tabs>
         </div>
