@@ -20,9 +20,9 @@ function App() {
         <Routes>
           {/* <Switch> */}
           <Route path="/" element={<Home />} />
-          <Route path="/expenses" element={Expenses} />
-          <Route path="/income" element={Income} />
-          <Route path="/savings" element={Savings} />
+          <Route path="/expenses" element={<Expenses />} />
+          <Route path="/income" element={<Income />} />
+          <Route path="/savings" element={<Savings />} />
           {/* </Switch> */}
         </Routes>
       </Router>
