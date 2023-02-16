@@ -21,11 +21,13 @@ function Savings() {
                             <Table variant='simple'>
                                 
                                 <Tbody>
+                                    {/* Line 1 */}
                                     <Tr>
                                         <Td>Salary</Td>
                                         <Td>£2,500.00</Td>
                                         <Td>01 September 2023</Td>
                                     </Tr>
+                                    {/* Line 2 */}
                                     <Tr>
                                         <Td>Bonus</Td>
                                         <Td>£1,200.00</Td>
@@ -47,26 +49,31 @@ function Savings() {
                             <Table variant='simple'>
                                 
                                 <Tbody>
+                                     {/* Line 1 */}
                                     <Tr>
                                         <Td>Transportation</Td>
                                         <Td>£7.90</Td>
                                         <Td>13 September 2023</Td>
                                     </Tr>
+                                    {/* Line 2 */}
                                     <Tr>
                                         <Td>Food</Td>
                                         <Td>£13.00</Td>
                                         <Td>13 September 2023</Td>
                                     </Tr>
+                                    {/* Line 3 */}
                                     <Tr>
                                         <Td>Fun</Td>
                                         <Td>£35.00</Td>
                                         <Td>13 September 2023</Td>
                                     </Tr>
+                                    {/* Line 4 */}
                                     <Tr>
                                         <Td>Transportation</Td>
                                         <Td>£7.90</Td>
                                         <Td>13 September 2023</Td>
                                     </Tr>
+                                    {/* Line 5 */}
                                     <Tr>
                                         <Td>Groceries</Td>
                                         <Td>£23.37</Td>
