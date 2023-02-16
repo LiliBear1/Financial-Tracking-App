@@ -2,18 +2,26 @@ import React from 'react';
 import Income from './Income';
 import Expenses from './Expenses';
 import Savings from './Savings';
-import { ChakraProvider } from '@chakra-ui/react';
-
+import { Flex, ChakraProvider, Spacer } from '@chakra-ui/react';
 
 function Home() {
     return (
         <div>
-        <ChakraProvider>
-            <p>Home world</p>
-        <Income />
-        <Expenses />
-        <Savings />
-        </ChakraProvider>
+            
+            <ChakraProvider>
+                <p>Home world</p>
+               
+                <Flex borderWidth="1px" borderRadius="xl">
+                    <Spacer />
+                        <Income />
+                    <Spacer />
+                        <Expenses />
+                    <Spacer />
+                </Flex>
+            
+                <Savings />
+            </ChakraProvider>
+            
         </div>
     )
 }

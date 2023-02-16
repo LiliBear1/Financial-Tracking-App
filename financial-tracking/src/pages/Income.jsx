@@ -26,9 +26,9 @@ function Income() {
     };
 
     return (
-        <Box rounded="md" maxW="400px" p={4} borderWidth="1px" borderRadius="xl">
+        <Box rounded="md" w="50%" m={2} p={4} boxShadow='lg' borderWidth="1px" borderRadius="xl" borderColor="green.500" color='green.500'>
             <form>
-            {/* === Income Type === */}
+                {/* === Income Type === */}
                 <FormControl id="incomeType" mt="4">
                     <FormLabel>Income Type</FormLabel>
                     <Select
@@ -43,7 +43,7 @@ function Income() {
                         <option>Others</option>
                     </Select>
                 </FormControl>
-            {/* === Income Amount === */}
+                {/* === Income Amount === */}
                 <FormControl id="income-amount" mt="4">
                     <FormLabel>Income Amount (GBP)</FormLabel>
                     <NumberInput
@@ -57,7 +57,7 @@ function Income() {
                     </NumberInput>
                 </FormControl>
 
-            {/* === Save Button === */}
+                {/* === Save Button === */}
                 <Button colorScheme="green" mt="4" onClick={handleSave}>
                     Save
                 </Button>
