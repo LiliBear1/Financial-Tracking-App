@@ -14,8 +14,14 @@ function Income() {
     const [incomeAmount, setIncomeAmount] = useState("");
     const [incomeType, setIncomeType] = useState("");
     const toast = useToast();
+    const [incomes, setIncomes] = useState(JSON.parse(localStorage.getItem("incomes")) || []);
 
     const handleSave = () => {
+        // Save income data to local storage
+        const updatedIncomes = [...incomes, { incomeType, incomeAmount }];
+        localStorage.setItem("incomes", JSON.stringify(updatedIncomes));
+        setIncomes(updatedIncomes);
+        
         // Cute toast popup confirming that data is saved
         toast({
             title: "Income saved",
@@ -63,6 +69,15 @@ function Income() {
                     Save
                 </Button>
             </form>
+
+
+            {incomes.map((income, index) => (
+            <div key={index}>
+                <p>
+                    {income.incomeType}: £{income.incomeAmount}
+                </p>
+            </div>
+      ))}
         </Box>
     );
 }
