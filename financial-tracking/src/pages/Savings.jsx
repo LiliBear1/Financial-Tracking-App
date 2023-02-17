@@ -86,7 +86,7 @@ function Savings() {
                 </TabPanels>
 
                 {/* Add js to calculate total balance on hand */}
-                <Stat>
+                <Stat bgColor="green.100" p={2} m={2} borderRadius="xl">
                     <StatLabel>Balance:</StatLabel>
                     <StatNumber>£3,623.77</StatNumber>
                     <StatHelpText>Feb 01 - Feb 28</StatHelpText>

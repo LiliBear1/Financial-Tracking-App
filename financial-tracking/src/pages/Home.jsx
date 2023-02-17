@@ -2,6 +2,8 @@ import React from 'react';
 import Income from './Income';
 import Expenses from './Expenses';
 import Savings from './Savings';
+import Balance from './Balance';
+import Doughnut from './Doughnut';
 import { Flex, ChakraProvider, Spacer } from '@chakra-ui/react';
 
 function Home() {
@@ -20,6 +22,8 @@ function Home() {
                 </Flex>
             
                 <Savings />
+                <Balance />
+                <Doughnut />
             </ChakraProvider>
             
         </div>
