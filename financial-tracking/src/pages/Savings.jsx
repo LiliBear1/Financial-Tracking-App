@@ -11,9 +11,9 @@ function Savings() {
   const [balance, setBalance] = useState(0);
 
   useEffect(() => {
-    const incomesData = JSON.parse(localStorage.getItem('incomes'));
+    const incomesData = JSON.parse(localStorage.getItem('incomes')) || [];
     setIncomes(incomesData);
-    const expensesData = JSON.parse(localStorage.getItem('expenses'));
+    const expensesData = JSON.parse(localStorage.getItem('expenses')) || [];
     setExpenses(expensesData);
   }, []);
 
