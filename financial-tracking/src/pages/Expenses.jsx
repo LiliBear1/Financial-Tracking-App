@@ -78,11 +78,11 @@ function Expenses() {
             </form>
 
             {/* Render list of expenses */}
-            {expenses.map((expense, index) => (
+            {/* {expenses.map((expense, index) => (
             <div key={index}>
                 <p>{expense.expenseType}: £{expense.expenseAmount}</p>
             </div>
-            ))}
+            ))} */}
         </Box>
     );
 }
