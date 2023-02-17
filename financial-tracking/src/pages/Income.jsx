@@ -1,11 +1,9 @@
 import { useState } from "react";
 import {
-    FormControl,
-    FormLabel,
+    FormControl, FormLabel,
     Button,
     useToast,
-    NumberInput,
-    NumberInputField,
+    NumberInput, NumberInputField,
     Select,
     Box,
 } from "@chakra-ui/react";

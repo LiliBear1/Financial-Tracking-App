@@ -1,18 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Tab,
-  Tabs,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Stat,
-  StatLabel,
-  StatNumber,
-  Table,
-  Tr,
-  Td,
-  Tbody,
-  TableContainer,
+  Tab, Tabs, TabList, TabPanel, TabPanels,
+  Stat, StatLabel,
+  StatNumber, Table, Tr, Td, Tbody, TableContainer,
 } from '@chakra-ui/react';
 
 function Savings() {
@@ -78,7 +68,7 @@ function Savings() {
           <TabPanel>
             <TableContainer>
               <Table variant='simple'>
-                <Tbody  color="red.500">
+                <Tbody color="red.500">
                   {expenses.map((expense, index) => (
                     <Tr key={index}>
                       <Td width='50%'>{expense.expenseType}</Td>
