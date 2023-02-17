@@ -71,13 +71,13 @@ function Income() {
             </form>
 
 
-            {incomes.map((income, index) => (
+            {/* {incomes.map((income, index) => (
             <div key={index}>
                 <p>
                     {income.incomeType}: £{income.incomeAmount}
                 </p>
             </div>
-      ))}
+      ))} */}
         </Box>
     );
 }
