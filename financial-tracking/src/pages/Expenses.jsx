@@ -1,11 +1,9 @@
 import { useState } from "react";
 import {
-    FormControl,
-    FormLabel,
+    FormControl, FormLabel,
     Button,
     useToast,
-    NumberInput,
-    NumberInputField,
+    NumberInput, NumberInputField,
     Select,
     Box,
 } from "@chakra-ui/react";
@@ -78,11 +76,11 @@ function Expenses() {
             </form>
 
             {/* Render list of expenses */}
-            {expenses.map((expense, index) => (
+            {/* {expenses.map((expense, index) => (
             <div key={index}>
                 <p>{expense.expenseType}: £{expense.expenseAmount}</p>
             </div>
-            ))}
+            ))} */}
         </Box>
     );
 }

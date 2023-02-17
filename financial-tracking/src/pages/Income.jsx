@@ -1,11 +1,9 @@
 import { useState } from "react";
 import {
-    FormControl,
-    FormLabel,
+    FormControl, FormLabel,
     Button,
     useToast,
-    NumberInput,
-    NumberInputField,
+    NumberInput, NumberInputField,
     Select,
     Box,
 } from "@chakra-ui/react";
@@ -71,13 +69,13 @@ function Income() {
             </form>
 
 
-            {incomes.map((income, index) => (
+            {/* {incomes.map((income, index) => (
             <div key={index}>
                 <p>
                     {income.incomeType}: £{income.incomeAmount}
                 </p>
             </div>
-      ))}
+      ))} */}
         </Box>
     );
 }
