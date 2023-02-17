@@ -14,8 +14,17 @@ function Expenses() {
     const [expenseAmount, setExpenseAmount] = useState("");
     const [expenseType, setExpenseType] = useState("");
     const toast = useToast();
-
+    const [expenses, setExpenses] = useState(
+    JSON.parse(localStorage.getItem("expenses")) || []
+    );
+    
+    
     const handleSave = () => {
+        
+        const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+        expenses.push({ expenseType, expenseAmount });
+        localStorage.setItem("expenses", JSON.stringify(expenses));  
+        
         // Cute toast popup confirming that data is saved
         toast({
             title: "Expense saved",
@@ -67,6 +76,13 @@ function Expenses() {
                     Save
                 </Button>
             </form>
+
+            {/* Render list of expenses */}
+            {expenses.map((expense, index) => (
+            <div key={index}>
+                <p>{expense.expenseType}: £{expense.expenseAmount}</p>
+            </div>
+            ))}
         </Box>
     );
 }
