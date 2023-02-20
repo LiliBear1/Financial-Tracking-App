@@ -11,10 +11,18 @@ function Savings() {
   const [balance, setBalance] = useState(0);
 
   useEffect(() => {
+    async function fetchData() {
+      try {
     const incomesData = JSON.parse(localStorage.getItem('incomes')) || [];
     setIncomes(incomesData);
     const expensesData = JSON.parse(localStorage.getItem('expenses')) || [];
     setExpenses(expensesData);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+fetchData();
   }, []);
 
   useEffect(() => {
