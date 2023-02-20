@@ -4,6 +4,7 @@ import Expenses from './Expenses';
 import Savings from './Savings';
 import Balance from './Balance';
 import Doughnut from './Doughnut';
+import SignUpButton from './SignUpButton';
 import { Flex, ChakraProvider, Spacer, Box, Heading, Text, Button, Divider, Stack } from '@chakra-ui/react';
 
 function Home() {
@@ -32,9 +33,10 @@ function Home() {
                             </Text>
                         </Stack>
                     </Stack>
-                    <Button size='lg' colorScheme='green' mt='24px'>
-                        Sign up for free {/* This is a place where we could implement netlify forms and data collection? */}
-                    </Button>
+                    {/* <Button size='lg' colorScheme='green' mt='24px' id='signUpBtn'>
+                        Sign up for free 
+                    </Button> */}
+                    <SignUpButton/>{/* This is a place where we could implement netlify forms and data collection? */}
                 </Box>
 
                 <Flex borderWidth="1px" borderRadius="xl">
