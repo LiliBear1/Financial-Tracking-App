@@ -5,7 +5,6 @@ import {
   StatNumber, Table, Tr, Td, Tbody, TableContainer, Button
 } from '@chakra-ui/react';
 
-
 function Savings() {
   const [incomes, setIncomes] = useState([]);
   const [expenses, setExpenses] = useState([]);
