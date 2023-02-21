@@ -8,6 +8,7 @@ import SignUpButton from './SignUpButton';
 import IncomeTotal from './IncomeTotal';
 import ExpensesTotal from './ExpensesTotal';
 import DarkMode from './DarkMode';
+import Welcome from './Welcome';
 import { Flex, ChakraProvider, Spacer, Box, Heading, Text, Button, Divider, Stack, 
     Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon
  } from '@chakra-ui/react';
@@ -15,53 +16,8 @@ import { Flex, ChakraProvider, Spacer, Box, Heading, Text, Button, Divider, Stac
 function Home() {
     return (
         <div>
-
             <ChakraProvider>
-                <Box maxW='60rem' pl={8} pt={4}>
-                    <Heading mb={4} as='h1' size='2xl'>Am I Rich Yet? [Working Name] </Heading>
-                    <Text fontSize='xl'>
-                        <p> [Working Name] mission is to empower you by providing a comprehensive and intuitive solution for tracking your daily expenses and monthly income.</p>
-                    </Text>
-                    {/* <Stack direction='row'  p={4}>
-                        <Divider orientation='vertical' h='auto' w='1px' bg='gray.300' />
-                        <Stack pl={4}>
-                            <Heading mb={2} as='h3' size='lg'>How does it work?</Heading>
-                            <Text fontSize='md'>
-                                <li>Keep track of your income, expenses, and savings all in one place</li>
-                                <li> Categorise your entries to easily see where your money is going</li>
-                                <li>See a summary of your finances at a glance, including your total income, expenses, and savings</li>
-                                <li>Visualize your spending and saving habits with easy-to-read charts and graphs</li>
-                                <li>Save your financial data locally, so you can access it whenever you need it</li>
-                                <li>With [Am I Rich Yet?], you'll be able to take control of your finances and make better decisions about your money.</li>
-                                <li><strong>Start making smarter money decisions today!</strong></li>
-                            </Text>
-                        </Stack>
-                    </Stack> */}
-                    <Accordion defaultIndex={[1]} allowMultiple p={2}>
-                        <AccordionItem>
-                            <AccordionButton>
-                                <Box as="span" flex='1' textAlign='left'>
-                                <Heading mb={2} as='h3' size='lg'>How does it work?</Heading>
-                                </Box>
-                                <AccordionIcon />
-                            </AccordionButton>
-                            <AccordionPanel pb={4}>
-                                <li>Keep track of your income, expenses, and savings all in one place</li>
-                                <li> Categorise your entries to easily see where your money is going</li>
-                                <li>See a summary of your finances at a glance, including your total income, expenses, and savings</li>
-                                <li>Visualize your spending and saving habits with easy-to-read charts and graphs</li>
-                                <li>Save your financial data locally, so you can access it whenever you need it</li>
-                                <li>With this app, you'll be able to take control of your finances and make better decisions about your money.</li>
-                                <li><strong>Start making smarter money decisions today!</strong></li>
-                            </AccordionPanel>
-                        </AccordionItem>
-                    </Accordion>
-                    {/* <Button size='lg' colorScheme='green' mt='24px' id='signUpBtn'>
-                        Sign up for free 
-                    </Button> */}
-                    <SignUpButton/>{/* This is a place where we could implement netlify forms and data collection? */}
-                    <DarkMode/>
-                </Box>
+                <Welcome/>
 
                 <Flex borderWidth="1px" borderRadius="xl" boxShadow='lg'>
                     <Spacer />
