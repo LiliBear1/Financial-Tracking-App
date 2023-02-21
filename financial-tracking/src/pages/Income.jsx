@@ -58,7 +58,17 @@ function Income() {
                         value={incomeAmount}
                         onChange={(value) => setIncomeAmount(value)}
                     >
-                        <NumberInputField placeholder="Income Amount" />
+                        <NumberInputField
+                            placeholder="Income Amount"
+                            onKeyPress={(e) => {
+                                // Allow only numbers and decimal points
+                                const pattern = /[0-9.]/;
+                                const inputChar = String.fromCharCode(e.charCode);
+                                if (!pattern.test(inputChar)) {
+                                    e.preventDefault();
+                                }
+                            }}
+                        />
                     </NumberInput>
                 </FormControl>
 
@@ -67,15 +77,6 @@ function Income() {
                     Save
                 </Button>
             </form>
-
-
-            {/* {incomes.map((income, index) => (
-            <div key={index}>
-                <p>
-                    {income.incomeType}: £{income.incomeAmount}
-                </p>
-            </div>
-      ))} */}
         </Box>
     );
 }

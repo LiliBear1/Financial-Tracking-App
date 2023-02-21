@@ -65,7 +65,17 @@ function Expenses() {
                         value={expenseAmount}
                         onChange={(value) => setExpenseAmount(value)}
                     >
-                        <NumberInputField placeholder="Expense Amount" />
+                        <NumberInputField
+                            placeholder="expense Amount"
+                            onKeyPress={(e) => {
+                                // Allow only numbers and decimal points
+                                const pattern = /[0-9.]/;
+                                const inputChar = String.fromCharCode(e.charCode);
+                                if (!pattern.test(inputChar)) {
+                                    e.preventDefault();
+                                }
+                            }}
+                        />
                     </NumberInput>
                 </FormControl>
 
@@ -74,13 +84,6 @@ function Expenses() {
                     Save
                 </Button>
             </form>
-
-            {/* Render list of expenses */}
-            {/* {expenses.map((expense, index) => (
-            <div key={index}>
-                <p>{expense.expenseType}: £{expense.expenseAmount}</p>
-            </div>
-            ))} */}
         </Box>
     );
 }
