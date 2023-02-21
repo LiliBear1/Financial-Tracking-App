@@ -46,7 +46,14 @@ function SignUpModal() {
   };
 
   return (
-    <>
+    
+    <form
+    data-netlify="true"
+    name="signuo"
+    method="post"
+    onSubmit={handleSubmit}
+  >
+    
       <Button id="signUpBtn" size='lg' colorScheme='green' m={2} mt='24px' onClick={handleOpen}>
         Sign up
       </Button>
@@ -80,7 +87,7 @@ function SignUpModal() {
           </form>
         </ModalContent>
       </Modal>
-    </>
+    </form>
   );
 }
 
