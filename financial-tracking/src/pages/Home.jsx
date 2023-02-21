@@ -7,6 +7,7 @@ import Doughnut from './Doughnut';
 import SignUpButton from './SignUpButton';
 import IncomeTotal from './IncomeTotal';
 import ExpensesTotal from './ExpensesTotal';
+import DarkMode from './DarkMode';
 import { Flex, ChakraProvider, Spacer, Box, Heading, Text, Button, Divider, Stack, 
     Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon
  } from '@chakra-ui/react';
@@ -59,10 +60,10 @@ function Home() {
                         Sign up for free 
                     </Button> */}
                     <SignUpButton/>{/* This is a place where we could implement netlify forms and data collection? */}
+                    <DarkMode/>
                 </Box>
 
                 <Flex borderWidth="1px" borderRadius="xl" boxShadow='lg'>
-
                     <Spacer />
                     <Income />
                     <Spacer />
