@@ -13,7 +13,10 @@ function ExpensesTotal() {
   return (
     <Stat align="center" bgColor="red.100" p={2} m={2} borderRadius="xl">
       <StatLabel>Total Expenses:</StatLabel>
-      <StatNumber>£{totalExpense.toFixed(2)}</StatNumber>
+      <StatNumber>£{totalExpense.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })}</StatNumber>
     </Stat>
   );
 }

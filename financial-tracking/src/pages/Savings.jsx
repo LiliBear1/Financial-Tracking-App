@@ -125,7 +125,10 @@ fetchData();
         {/* Display total balance */}
         <Stat align="center" bgColor="green.100" p={2} m={2} borderRadius="xl">
           <StatLabel>Balance:</StatLabel>
-          <StatNumber>£{balance.toFixed(2)}</StatNumber>
+          <StatNumber>£{balance.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })}</StatNumber>
         </Stat>
       </Tabs>
     </div>

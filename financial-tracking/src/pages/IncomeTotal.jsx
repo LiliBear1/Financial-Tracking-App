@@ -13,7 +13,10 @@ function IncomeTotal() {
   return (
     <Stat align="center" bgColor="green.100" p={2} m={2} borderRadius="xl">
       <StatLabel>Total Income:</StatLabel>
-      <StatNumber>£{totalIncome.toFixed(2)}</StatNumber>
+      <StatNumber>£{totalIncome.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })}</StatNumber>
     </Stat>
   );
 }
