@@ -15,7 +15,7 @@ function Savings() {
     setIncomes(incomesData);
     const expensesData = JSON.parse(localStorage.getItem('expenses')) || [];
     setExpenses(expensesData);
-  }, []);
+  }, );
 
   useEffect(() => {
     const totalIncome = incomes.reduce(
