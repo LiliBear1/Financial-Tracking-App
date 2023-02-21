@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   Tab, Tabs, TabList, TabPanel, TabPanels,
   Stat, StatLabel,
-  StatNumber, Table, Tr, Td, Tbody, TableContainer,
+  StatNumber, Table, Tr, Td, Tbody, TableContainer, Button
 } from '@chakra-ui/react';
 
 function Savings() {
@@ -38,13 +38,28 @@ fetchData();
     setBalance(totalBalance);
   }, [incomes, expenses]);
 
+  const handleDelete = (index, type) => {
+    if (type === 'income') {
+      const newIncomes = [...incomes];
+      newIncomes.splice(index, 1);
+      localStorage.setItem('incomes', JSON.stringify(newIncomes));
+      setIncomes(newIncomes);
+    } else if (type === 'expense') {
+      const newExpenses = [...expenses];
+      newExpenses.splice(index, 1);
+      localStorage.setItem('expenses', JSON.stringify(newExpenses));
+      setExpenses(newExpenses);
+    }
+  };
+
   return (
     <div>
       <Tabs
         isFitted
         variant='enclosed'
         p={2}
-        m={2}
+        mt={2}
+        mb={2}
         boxShadow='lg'
         borderWidth='1px'
         borderRadius='xl'
@@ -55,16 +70,25 @@ fetchData();
           <Tab color='red.500'>Expenses</Tab>
         </TabList>
 
-        <TabPanels borderBottomWidth='1px' borderColor='gray.200'>
+         <TabPanels borderBottomWidth='1px' borderColor='gray.200'>
           {/* incomeType + amount in local storage */}
           <TabPanel>
             <TableContainer>
-              <Table variant='simple' color="green.500">
+              <Table variant='simple' color='green.500'>
                 <Tbody>
                   {incomes.map((income, index) => (
                     <Tr key={index}>
-                      <Td width='33%'>{income.incomeType}</Td>
-                      <Td width='33%'>£{income.incomeAmount}</Td>
+                      <Td width='45%'>{income.incomeType}</Td>
+                      <Td width='45%'>£{income.incomeAmount}</Td>
+                      <Td width='10%'>
+                        <Button
+                          color='red.500'
+                          variant='outline'
+                          aria-label='delete'
+                          
+                          onClick={() => handleDelete(index, 'income')}
+                        >Delete</Button>
+                      </Td>
                     </Tr>
                   ))}
                 </Tbody>
@@ -81,6 +105,15 @@ fetchData();
                     <Tr key={index}>
                       <Td width='50%'>{expense.expenseType}</Td>
                       <Td width='50%'>£{expense.expenseAmount}</Td>
+                      <Td width='10%'>
+                        <Button
+                          color='red.500'
+                          variant='outline'
+                          aria-label='delete'
+                          
+                          onClick={() => handleDelete(index, 'expense')}
+                        >Delete</Button>
+                      </Td>
                     </Tr>
                   ))}
                 </Tbody>
@@ -90,9 +123,12 @@ fetchData();
         </TabPanels>
 
         {/* Display total balance */}
-        <Stat bgColor="green.100" p={2} m={2} borderRadius="xl">
+        <Stat align="center" bgColor="green.100" p={2} m={2} borderRadius="xl">
           <StatLabel>Balance:</StatLabel>
-          <StatNumber>£{balance.toFixed(2)}</StatNumber>
+          <StatNumber>£{balance.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })}</StatNumber>
         </Stat>
       </Tabs>
     </div>

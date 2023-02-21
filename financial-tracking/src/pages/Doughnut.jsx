@@ -1,83 +1,97 @@
-import React from 'react';
-import { Box } from '@chakra-ui/react';
-import Chart from 'chart.js/auto';
+import React, { useState, useEffect } from "react";
+import { Box, Heading } from "@chakra-ui/react";
+import Chart from "chart.js/auto";
 
-const incomeData = {
-  labels: ['Salary', 'Bonus'],
-  datasets: [
-    {
-      label: 'Income',
-      data: [2500, 1200],
-      backgroundColor: ['#2ecc71', '#3498db'],
-      borderWidth: 0,
-    },
-  ],
-};
+function DoughnutChart() {
+  const [incomeData, setIncomeData] = useState({ labels: [], datasets: [] });
+  const [expenseData, setExpenseData] = useState({ labels: [], datasets: [] });
 
-const expensesData = {
-  labels: ['Transportation', 'Utilities', 'Food', 'Fun', 'Groceries', 'Health', 'Shopping'],
-  datasets: [
-    {
-      label: 'Expenses',
-      data: [161.55, 1817.06, 451.52, 441.50, 225.05, 43.98, 199.99],
-      backgroundColor: [
-        '#e74c3c',
-        '#f1c40f',
-        '#9b59b6',
-        '#34495e',
-        '#1abc9c',
-        '#e67e22',
-        '#7f8c8d',
+  useEffect(() => {
+    const incomes = JSON.parse(localStorage.getItem("incomes")) || [];
+    const incomeLabels = [...new Set(incomes.map((income) => income.incomeType))];
+    const incomeValues = incomeLabels.map((label) => {
+      const value = incomes
+        .filter((income) => income.incomeType === label)
+        .reduce((total, income) => total + parseFloat(income.incomeAmount), 0);
+      return value.toFixed(2);
+    });
+    setIncomeData({
+      labels: incomeLabels,
+      datasets: [
+        {
+          label: "Income",
+          data: incomeValues
+        },
       ],
-      borderWidth: 0,
-    },
-  ],
-};
-
-const options = {
-  responsive: true,
-  maintainAspectRatio: false,
-  cutout: '70%',
-  plugins: {
-    legend: {
-      display: false,
-    },
-    tooltip: {
-      enabled: false,
-    },
-  },
-};
-
-function Doughnut() {
-  const incomeRef = React.useRef();
-  const expensesRef = React.useRef();
-
-  React.useEffect(() => {
-    const incomeChart = new Chart(incomeRef.current, {
-      type: 'doughnut',
-      data: incomeData,
-      options,
     });
 
-    const expensesChart = new Chart(expensesRef.current, {
-      type: 'doughnut',
-      data: expensesData,
-      options,
+    const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+    const expenseLabels = [...new Set(expenses.map((expense) => expense.expenseType))];
+    const expenseValues = expenseLabels.map((label) => {
+      const value = expenses
+        .filter((expense) => expense.expenseType === label)
+        .reduce((total, expense) => total + parseFloat(expense.expenseAmount), 0);
+      return value.toFixed(2);
+    });
+    setExpenseData({
+      labels: expenseLabels,
+      datasets: [
+        {
+          label: "Expenses",
+          data: expenseValues,
+        },
+      ],
+    });
+  }, []);
+
+  useEffect(() => {
+    const incomeCtx = document.getElementById("incomeChart").getContext("2d");
+    const expenseCtx = document.getElementById("expenseChart").getContext("2d");
+
+    const incomeChart = new Chart(incomeCtx, {
+      type: "doughnut",
+      data: incomeData,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    });
+
+    const expenseChart = new Chart(expenseCtx, {
+      type: "doughnut",
+      data: expenseData,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
     });
 
     return () => {
       incomeChart.destroy();
-      expensesChart.destroy();
+      expenseChart.destroy();
     };
-  }, []);
+  }, [incomeData, expenseData]);
 
   return (
-    <Box display="flex" justifyContent="center">
-      <p>hmm....donuts</p>
-      {/* <canvas ref={incomeRef} />
-      <canvas ref={expensesRef} /> */}
+    <Box display="flex">
+    <Box width="48%"  rounded="md" m={2} p={4} boxShadow='lg' borderWidth="1px" borderRadius="xl" borderColor="green.500" color='green.500'>
+      <Heading size='lg' textAlign='center' mb={5}>Income Breakdown</Heading>
+      <canvas id="incomeChart"></canvas>
+      </Box>
+      <Box width="48%" rounded="md" m={2} p={4} boxShadow='lg' borderWidth="1px" borderRadius="xl" borderColor="red.500" color='red.500'>
+      <Heading size='lg' textAlign='center' mb={5}>Expenses Breakdown</Heading>
+      <canvas id="expenseChart"></canvas>
+    </Box>
     </Box>
   );
 }
 
-export default Doughnut;
+export default DoughnutChart;
