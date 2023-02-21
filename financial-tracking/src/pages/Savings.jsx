@@ -58,7 +58,8 @@ fetchData();
         isFitted
         variant='enclosed'
         p={2}
-        m={2}
+        mt={2}
+        mb={2}
         boxShadow='lg'
         borderWidth='1px'
         borderRadius='xl'

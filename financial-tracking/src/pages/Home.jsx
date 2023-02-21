@@ -61,7 +61,7 @@ function Home() {
                     <SignUpButton/>{/* This is a place where we could implement netlify forms and data collection? */}
                 </Box>
 
-                <Flex borderWidth="1px" borderRadius="xl">
+                <Flex borderWidth="1px" borderRadius="xl" boxShadow='lg'>
 
                     <Spacer />
                     <Income />
@@ -72,13 +72,14 @@ function Home() {
 
                 <Savings />
 
-                <Flex borderWidth="1px" borderRadius="xl">
-                <IncomeTotal />
-                <ExpensesTotal />
+                <Flex borderWidth="1px" borderRadius="xl" boxShadow='lg'>
+                    <IncomeTotal />
+                    <ExpensesTotal />
                 </Flex>
-                <Balance />
+                
                 <Doughnut />
-            </ChakraProvider>
+                <Balance />
+                </ChakraProvider>
 
         </div>
     )

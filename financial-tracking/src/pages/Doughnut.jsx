@@ -82,11 +82,11 @@ function DoughnutChart() {
 
   return (
     <Box display="flex">
-    <Box width="50%"  rounded="md" m={2} p={4} boxShadow='lg' borderWidth="1px" borderRadius="xl" borderColor="green.500" color='green.500'>
+    <Box width="48%"  rounded="md" m={2} p={4} boxShadow='lg' borderWidth="1px" borderRadius="xl" borderColor="green.500" color='green.500'>
       <Heading size='lg' textAlign='center' mb={5}>Income Breakdown</Heading>
       <canvas id="incomeChart"></canvas>
       </Box>
-      <Box width="50%" rounded="md" m={2} p={4} boxShadow='lg' borderWidth="1px" borderRadius="xl" borderColor="red.500" color='red.500'>
+      <Box width="48%" rounded="md" m={2} p={4} boxShadow='lg' borderWidth="1px" borderRadius="xl" borderColor="red.500" color='red.500'>
       <Heading size='lg' textAlign='center' mb={5}>Expenses Breakdown</Heading>
       <canvas id="expenseChart"></canvas>
     </Box>
