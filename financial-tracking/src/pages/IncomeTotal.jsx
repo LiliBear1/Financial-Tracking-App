@@ -12,8 +12,8 @@ function IncomeTotal() {
 
   return (
     <Stat align="center" bgColor="green.100" p={2} m={2} borderRadius="xl">
-      <StatLabel>Total Income</StatLabel>
-      <StatNumber>{totalIncome.toFixed(2)}</StatNumber>
+      <StatLabel>Total Income:</StatLabel>
+      <StatNumber>£{totalIncome.toFixed(2)}</StatNumber>
     </Stat>
   );
 }

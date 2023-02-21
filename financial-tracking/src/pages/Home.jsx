@@ -6,6 +6,7 @@ import Balance from './Balance';
 import Doughnut from './Doughnut';
 import SignUpButton from './SignUpButton';
 import IncomeTotal from './IncomeTotal';
+import ExpensesTotal from './ExpensesTotal';
 import { Flex, ChakraProvider, Spacer, Box, Heading, Text, Button, Divider, Stack } from '@chakra-ui/react';
 
 function Home() {
@@ -50,7 +51,11 @@ function Home() {
                 </Flex>
 
                 <Savings />
+
+                <Flex borderWidth="1px" borderRadius="xl">
                 <IncomeTotal />
+                <ExpensesTotal />
+                </Flex>
                 <Balance />
                 <Doughnut />
             </ChakraProvider>
