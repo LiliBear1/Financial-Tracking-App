@@ -36,7 +36,7 @@ function Home() {
                             </Text>
                         </Stack>
                     </Stack> */}
-                    <Accordion defaultIndex={[0]} allowMultiple p={2}>
+                    <Accordion defaultIndex={[1]} allowMultiple p={2}>
                         <AccordionItem>
                             <AccordionButton>
                                 <Box as="span" flex='1' textAlign='left'>
