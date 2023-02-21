@@ -123,7 +123,7 @@ fetchData();
         </TabPanels>
 
         {/* Display total balance */}
-        <Stat bgColor="green.100" p={2} m={2} borderRadius="xl">
+        <Stat align="center" bgColor="green.100" p={2} m={2} borderRadius="xl">
           <StatLabel>Balance:</StatLabel>
           <StatNumber>£{balance.toFixed(2)}</StatNumber>
         </Stat>

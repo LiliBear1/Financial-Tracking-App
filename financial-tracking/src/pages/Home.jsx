@@ -5,6 +5,7 @@ import Savings from './Savings';
 import Balance from './Balance';
 import Doughnut from './Doughnut';
 import SignUpButton from './SignUpButton';
+import IncomeTotal from './IncomeTotal';
 import { Flex, ChakraProvider, Spacer, Box, Heading, Text, Button, Divider, Stack } from '@chakra-ui/react';
 
 function Home() {
@@ -17,7 +18,7 @@ function Home() {
                     <Text fontSize='xl'>
                         <p> [Working Name] mission is to empower you by providing a comprehensive and intuitive solution for tracking your daily expenses and monthly income.</p>
                     </Text>
-                    <Stack direction='row' h='230px' p={4}>
+                    <Stack direction='row'  p={4}>
                         <Divider orientation='vertical' h='auto' w='1px' bg='gray.300' />
                         <Stack pl={4}>
                             <Heading mb={2} as='h3' size='lg'>How does it work?</Heading>
@@ -49,6 +50,7 @@ function Home() {
                 </Flex>
 
                 <Savings />
+                <IncomeTotal />
                 <Balance />
                 <Doughnut />
             </ChakraProvider>
