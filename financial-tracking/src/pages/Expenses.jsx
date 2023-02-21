@@ -66,7 +66,7 @@ function Expenses() {
                         onChange={(value) => setExpenseAmount(value)}
                     >
                         <NumberInputField
-                            placeholder="expense Amount"
+                            placeholder="Expense Amount"
                             onKeyPress={(e) => {
                                 // Allow only numbers and decimal points
                                 const pattern = /[0-9.]/;
