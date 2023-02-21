@@ -16,7 +16,7 @@ This is a financial tracking app built using React, npm, chart.js, and chakra ui
 
 ## Deployed Page
 
-* [Deployed Page Link](UPDATE)
+* [Deployed Page Link](https://chic-swan-b48b65.netlify.app/)
 
 * [Git Page Link](https://github.com/LiliBear1/Financial-Tracking-App) 
 
