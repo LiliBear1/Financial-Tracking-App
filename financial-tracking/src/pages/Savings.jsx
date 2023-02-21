@@ -23,7 +23,7 @@ function Savings() {
 }
 
 fetchData();
-  }, []);
+  }, );
 
   useEffect(() => {
     const totalIncome = incomes.reduce(
