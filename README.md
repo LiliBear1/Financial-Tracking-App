@@ -47,34 +47,55 @@ The Income Form component allows users to add or edit their income. Users can in
 ### Income Table
 The Income Table component displays a table of all the user's income, including the source and amount. Users can delete any income entry by clicking on the respective icon in the table.
 
+![Income Table](/financial-tracking/src/images/Income%20Table.png)
 
 Future enhancement options will include having a date stamp and edit option.
 <br></br>
 
 ### Expenses
 The Expense Form component allows users to add their expenses. Users can input the expense category and the amount. Once the form is submitted, the new expense will be added to the table below.
+
+![Expenses Form](/financial-tracking/src/images/Expenses%20Form.png)
 <br></br>
 
 ### Expense Table
 The Expense Table component displays a table of all the user's expenses, including the category and amount. Users can delete any expense entry by clicking on the respective icon in the table.
+
+![Expenses Table](/financial-tracking/src/images/Expenses%20Table.png)
 
 Future enhancement options will include having a date stamp and edit option.
 <br></br>
 
 ### Donut Chart
 The Chart component displays a visual representation of the user's income and expenses. The chart is created using chart.js and displays the user's income and expenses as a donut chart as well as a corresponding line graph below, this will adjust once the user has entered data over a period of time.
+
+![Donuts...mmmm Donuts](/financial-tracking/src/images/Donuts.png)
 <br></br>
 
 
 ### Sign Up
 The Sign Up option at the top of the page allows users to create a new account. Users will need to input their email address and a password, and confirm their password to create an account. 
+
+![Signup Button under welcome and instructions](/financial-tracking/src/images/Signup%20with%20instructions.png)
+
+![Signup form](/financial-tracking/src/images/Signup%20Form.png)
+
 <br></br>
 
 ### Dark Mode
 We have included an additional Dark Mode feature for those who prefer to live life on the dark side.
 
+![Dark Mode Button](/financial-tracking/src/images/Dark%20Mode%20Button.png)
+
+![Dark Mode Page Preview](/financial-tracking/src/images/Dark%20Mode%20Preview.png)
+
+<br></br>
+
 ### Navigation Bar
 The Navigation Bar allows users to individually select the income and expense form as well as view the savings, this may be helpful for users who don't like seeing too much on one screen or find it distracting.
+
+![Nav Bar](/financial-tracking/src/images/NavBar.png)
+<br></br>
 
 ## Technologies
 
@@ -100,6 +121,9 @@ At the very start of the project our aim was to have an MVP in place by a set da
 We kept notes on what had been achieved in the previous day so that we could look back at this as well as the Roadmap to measure our progress and we discussed these in our standups including outlining any bugs or issues we may be facing. 
 
 The wireframe helped us plan out our builds better as we had an idea of how we wanted the page to look.
+
+
+
 <br></br>
 
 ### Github Projects
