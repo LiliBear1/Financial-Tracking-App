@@ -15,11 +15,21 @@ function Income() {
     const [incomes, setIncomes] = useState(JSON.parse(localStorage.getItem("incomes")) || []);
 
     const handleSave = () => {
+        if (incomeAmount === "") {
+            toast({
+                title: "Please enter a valid income amount",
+                status: "error",
+                duration: 3000,
+                isClosable: true,
+            });
+            return;
+        }
+
         // Save income data to local storage
         const updatedIncomes = [...incomes, { incomeType, incomeAmount }];
         localStorage.setItem("incomes", JSON.stringify(updatedIncomes));
         setIncomes(updatedIncomes);
-        
+
         // Cute toast popup confirming that data is saved
         toast({
             title: "Income saved",
@@ -27,6 +37,10 @@ function Income() {
             duration: 3000,
             isClosable: true,
         });
+
+        // Reset input fields
+        setIncomeAmount("");
+        setIncomeType("");
     };
 
     return (
