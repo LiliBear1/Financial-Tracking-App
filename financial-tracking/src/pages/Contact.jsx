@@ -1,13 +1,12 @@
 import { Box, Center, Flex, Heading, Image, Link, Text } from "@chakra-ui/react";
-import lili from '../images/lili.jfif';
-import shannon from '../images/shannon.jfif';
+
 const developers = [
   {
     firstname: "Lili",
     lastname: "Begum",
     nickname1: "Strategy",
     nickname2: "Savant",
-    avatar: "lili",
+    avatar: "https://ca.slack-edge.com/T041KALGCKY-U046WHDH658-f8c2675cae30-512",
     github: "https://github.com/LiliBear1",
   },
   {
@@ -15,7 +14,7 @@ const developers = [
     lastname: "Yap",
     nickname1: "Frontend",
     nickname2: "Fanatic",
-    avatar: "https://via.placeholder.com/150",
+    avatar: "https://ca.slack-edge.com/T041KALGCKY-U046G1VBU5V-00ddeb69f108-512",
     github: "https://github.com/Damnsemicolon",
     },
     {
@@ -23,7 +22,7 @@ const developers = [
     lastname: "Alibhai",
     nickname1: "Backend",
     nickname2: "Boss",
-    avatar: "https://via.placeholder.com/150",
+    avatar: "https://ca.slack-edge.com/T041KALGCKY-U046WF3CNJX-c5039635330d-512",
     github: "https://github.com/Najma53",
     },
     {
@@ -31,7 +30,7 @@ const developers = [
     lastname: "Chen",
     nickname1: "Graphic",
     nickname2: "Guru",
-    avatar: "https://via.placeholder.com/150",
+    avatar: "https://ca.slack-edge.com/T041KALGCKY-U046WHKR1MY-52caf92968bc-512",
     github: "https://github.com/Cherryyeer",
     },
 ];
