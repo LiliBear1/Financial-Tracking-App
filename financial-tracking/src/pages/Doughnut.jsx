@@ -52,6 +52,7 @@ function DoughnutChart() {
       type: "doughnut",
       data: incomeData,
       options: {
+        cutout: '70%',
         responsive: true,
         plugins: {
           legend: {
@@ -60,11 +61,12 @@ function DoughnutChart() {
         },
       },
     });
-
+    
     const expenseChart = new Chart(expenseCtx, {
       type: "doughnut",
       data: expenseData,
       options: {
+        cutout: '70%',
         responsive: true,
         plugins: {
           legend: {

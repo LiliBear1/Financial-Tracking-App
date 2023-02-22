@@ -90,7 +90,7 @@ function Expenses() {
                 </FormControl>
 
                 {/* === Save Button === */}
-                <Button colorScheme="red" mt="4" onClick={handleSave}>
+                <Button colorScheme="red" mt="4" onClick={handleSave} w='100%'>
                     Save
                 </Button>
             </form>

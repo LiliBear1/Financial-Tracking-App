@@ -11,7 +11,7 @@ function IncomeTotal() {
   }, []);
 
   return (
-    <Stat align="center" bgColor="green.400" p={2} m={2} borderRadius="xl">
+    <Stat align="center" bgColor="green.500" p={2} m={2} borderRadius="xl" color='white'>
       <StatLabel>Total Income:</StatLabel>
       <StatNumber>£{totalIncome.toLocaleString('en-US', {
     minimumFractionDigits: 2,
