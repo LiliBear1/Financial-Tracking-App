@@ -9,12 +9,12 @@ function Welcome() {
     return (
         <div>
         <Flex direction="column" justify='center'>
-            <Box m={10} align='center'>
-            <Image src="piggy.jpg" alt="Piggy Bank" h='30vh' objectFit='cover' borderRadius='xl'/>
-                <Text fontSize='xl' align="center">
+            <Box ml={10} mr={10} align='center' >
+            <Image src="piggy.jpg" id='piggy' alt="Piggy Bank" h='30vh' objectFit='cover' borderRadius='xl'/>
+                <Text fontSize='xl'  maxW='500px'>
                     <p>Our mission is to empower you by providing a comprehensive and intuitive solution for tracking your daily expenses and monthly income.</p>
                 </Text>
-                <Accordion defaultIndex={[1]} allowMultiple p={2}>
+                <Accordion defaultIndex={[1]} allowMultiple p={1} maxW='500px'>
                     <AccordionItem>
                         <AccordionButton>
                             <Box as="span" flex='1' textAlign='left'>
