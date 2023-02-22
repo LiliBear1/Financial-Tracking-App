@@ -53,6 +53,8 @@ function Contact() {
             maxW="sm"
             w="25%"
             textAlign="center"
+            transition="transform 0.3s"
+            _hover={{ transform: "scale(1.05)" }}
           >
             <Center mt={5} mb={5}>
               <Image

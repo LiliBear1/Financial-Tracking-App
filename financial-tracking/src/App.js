@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Expenses from "./pages/Expenses";
 import Income from "./pages/Income";
 import Savings from "./pages/Savings";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/expenses" element={<Expenses />} />
             <Route path="/income" element={<Income />} />
             <Route path="/savings" element={<Savings />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </Router>

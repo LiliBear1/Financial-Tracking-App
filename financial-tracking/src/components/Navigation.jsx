@@ -23,9 +23,14 @@ function Navigation() {
               <BreadcrumbLink as={Link} to="/expenses" fontSize="lg" fontWeight="medium" color="gray.500">Expenses</BreadcrumbLink>
             </BreadcrumbItem>
 
-            <BreadcrumbItem isCurrentPage>
+            <BreadcrumbItem>
               <BreadcrumbLink as={Link} to="/savings" fontSize="lg" fontWeight="medium" color="gray.500">Savings</BreadcrumbLink>
             </BreadcrumbItem>
+
+            <BreadcrumbItem>
+              <BreadcrumbLink as={Link} to="/contact" fontSize="lg" fontWeight="medium" color="gray.500">Contact Us</BreadcrumbLink>
+            </BreadcrumbItem>
+            
           </Breadcrumb>
         </Box>
       </Flex>
