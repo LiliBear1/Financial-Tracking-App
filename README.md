@@ -22,6 +22,8 @@ This is a financial tracking app built using React, npm, chart.js, and chakra ui
 
     ![Continued Deployed Page View showing visuals using chart.js including donut breakdown of savings and line graph](/financial-tracking/src/images/Page%20Overview%202.png)
 
+    
+
 * [Git Page Link](https://github.com/LiliBear1/Financial-Tracking-App) 
 
 ## Getting Started
@@ -36,6 +38,8 @@ The financial tracking app includes the following features:
 * Add, edit, and delete income and expenses
 * View all income and expenses in a table format
 * Visual representation of income and expenses through chart.js
+
+![Demo GIF of page](/financial-tracking/src/images/Demo%20Gif.gif)
 <br></br>
 
 ### Income
@@ -85,10 +89,7 @@ The Sign Up option at the top of the page allows users to create a new account. 
 ### Dark Mode
 We have included an additional Dark Mode feature for those who prefer to live life on the dark side.
 
-![Dark Mode Button](/financial-tracking/src/images/Dark%20Mode%20Button.png)
-
-![Dark Mode Page Preview](/financial-tracking/src/images/Dark%20Mode%20Preview.png)
-
+![Dark Mode Page Gif](/financial-tracking/src/images/Dark%20Mode.gif)
 <br></br>
 
 ### Navigation Bar
@@ -122,13 +123,18 @@ We kept notes on what had been achieved in the previous day so that we could loo
 
 The wireframe helped us plan out our builds better as we had an idea of how we wanted the page to look.
 
+![Roadmap](/financial-tracking/src/images/FinTrack_Roadmap.png)
 
+![Wireframe](/financial-tracking/src/images/Wireframe.png)
 
+![Standup Notes Example](/financial-tracking/src/images/Standup.png)
 <br></br>
 
 ### Github Projects
 
 We used Github Projects to allow us to create cards for each feature or issue to give us an overview of the projects process and help us manage our workflow.
+
+![PSnippet of Github Projects, used to follow Kanban and Agile working](/financial-tracking/src/images/Kanban.png)
 <br></br>
 
 ### Git Branching
