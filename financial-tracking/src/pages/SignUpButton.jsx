@@ -54,7 +54,7 @@ function SignUpModal() {
     onSubmit={handleSubmit}
   >
     
-      <Button id="signUpBtn" size='lg' colorScheme='green' m={2} mt='24px' onClick={handleOpen}>
+      <Button id="signUpBtn" size='lg' colorScheme='orange' m={2} mt='24px' onClick={handleOpen}>
         Sign up
       </Button>
 
