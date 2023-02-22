@@ -12,14 +12,23 @@ function Income() {
     const [incomeAmount, setIncomeAmount] = useState("");
     const [incomeType, setIncomeType] = useState("");
     const toast = useToast();
-    const [incomes, setIncomes] = useState(JSON.parse(localStorage.getItem("incomes")) || []);
 
     const handleSave = () => {
+        if (incomeAmount === "") {
+            toast({
+                title: "Income amount cannot be blank",
+                status: "error",
+                duration: 3000,
+                isClosable: true,
+            });
+            return;
+        }
+
         // Save income data to local storage
-        const updatedIncomes = [...incomes, { incomeType, incomeAmount }];
-        localStorage.setItem("incomes", JSON.stringify(updatedIncomes));
-        setIncomes(updatedIncomes);
-        
+        const incomes = JSON.parse(localStorage.getItem("incomes")) || [];
+        incomes.push({ incomeType, incomeAmount });
+        localStorage.setItem("incomes", JSON.stringify(incomes));  
+
         // Cute toast popup confirming that data is saved
         toast({
             title: "Income saved",
@@ -27,6 +36,10 @@ function Income() {
             duration: 3000,
             isClosable: true,
         });
+
+        // Reset input fields
+        setIncomeAmount("");
+        setIncomeType("");
     };
 
     return (
@@ -48,6 +61,7 @@ function Income() {
                         <option>Others</option>
                     </Select>
                 </FormControl>
+                
                 {/* === Income Amount === */}
                 <FormControl id="income-amount" mt="4">
                     <FormLabel>Income Amount (GBP)</FormLabel>

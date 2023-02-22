@@ -1,14 +1,16 @@
 import SignUpButton from './SignUpButton';
 import DarkMode from './DarkMode';
 import {
-    Flex, Box, Heading, Text,
+    Flex, Box, Heading, Text, Image,
     Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon
 } from "@chakra-ui/react";
 
 function Welcome() {
     return (
-        <Flex direction="column">
-            <Box m={10}>
+        <div>
+        <Flex direction="column" justify='center'>
+            <Box m={10} align='center'>
+            <Image src="piggy.jpg" alt="Piggy Bank" h='30vh' objectFit='cover' borderRadius='xl'/>
                 <Text fontSize='xl' align="center">
                     <p>Our mission is to empower you by providing a comprehensive and intuitive solution for tracking your daily expenses and monthly income.</p>
                 </Text>
@@ -20,7 +22,7 @@ function Welcome() {
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
-                        <AccordionPanel pb={4}>
+                        <AccordionPanel >
                             <li>Keep track of your income, expenses, and savings all in one place</li>
                             <li> Categorise your entries to easily see where your money is going</li>
                             <li>See a summary of your finances at a glance, including your total income, expenses, and savings</li>
@@ -31,12 +33,13 @@ function Welcome() {
                         </AccordionPanel>
                     </AccordionItem>
                 </Accordion>
-                <Box align='center'>
-                    <SignUpButton />
-                    <DarkMode />
                 </Box>
-            </Box>
         </Flex>
+        <Flex justify='center'>
+            <SignUpButton />
+            <DarkMode />
+        </Flex>
+                </div>
     );
 }
 

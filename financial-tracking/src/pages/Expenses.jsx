@@ -12,13 +12,19 @@ function Expenses() {
     const [expenseAmount, setExpenseAmount] = useState("");
     const [expenseType, setExpenseType] = useState("");
     const toast = useToast();
-    const [expenses, setExpenses] = useState(
-    JSON.parse(localStorage.getItem("expenses")) || []
-    );
-    
     
     const handleSave = () => {
+        if (!expenseAmount) {
+            toast({
+                title: "Expense amount cannot be blank",
+                status: "error",
+                duration: 3000,
+                isClosable: true,
+            });
+            return;
+        }
         
+        // Save expense data to local storage
         const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
         expenses.push({ expenseType, expenseAmount });
         localStorage.setItem("expenses", JSON.stringify(expenses));  
@@ -26,10 +32,14 @@ function Expenses() {
         // Cute toast popup confirming that data is saved
         toast({
             title: "Expense saved",
-            status: "error",
+            status: "success",
             duration: 3000,
             isClosable: true,
         });
+
+        // Reset the form fields after saving
+        setExpenseAmount("");
+        setExpenseType("");
     };
 
     return (
