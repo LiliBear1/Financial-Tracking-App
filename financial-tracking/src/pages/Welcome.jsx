@@ -8,10 +8,10 @@ import {
 function Welcome() {
     return (
         <div>
-        <Flex direction="column" justify='center'>
-            <Box ml={10} mr={10} align='center' >
+        <Flex direction="column" >
+            <Box ml={10} mr={10} mt={10} align='center' >
             <Image src="piggy.jpg" id='piggy' alt="Piggy Bank" h='30vh' objectFit='cover' borderRadius='xl'/>
-                <Text fontSize='xl'  maxW='500px'>
+                <Text fontSize='xl'  maxW='500px' p={5} align='justify'>
                     <p>Our mission is to empower you by providing a comprehensive and intuitive solution for tracking your daily expenses and monthly income.</p>
                 </Text>
                 <Accordion defaultIndex={[1]} allowMultiple p={1} maxW='500px'>
@@ -35,7 +35,7 @@ function Welcome() {
                 </Accordion>
                 </Box>
         </Flex>
-        <Flex justify='center'>
+        <Flex justify='center' mb={10}>
             <SignUpButton />
             <DarkMode />
         </Flex>
