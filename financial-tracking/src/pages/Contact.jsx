@@ -44,8 +44,9 @@ function Contact() {
         {developers.map((developer) => (
           <Box
             key={developer.name}
-            bg="white"
             borderRadius="xl"
+            border="1px solid"
+            borderColor="gray.300"
             boxShadow="lg"
             m={3}
             p={3}
@@ -56,7 +57,7 @@ function Contact() {
             <Center mt={5} mb={5}>
               <Image
                 src={developer.avatar}
-                alt={`Avatar for ${developer.name}`}
+                alt={`Avatar for ${developer.firstname}`}
                 boxSize="150px"
                 objectFit="cover"
                 borderRadius="full"
@@ -65,8 +66,8 @@ function Contact() {
             <Heading mb={2} size="md">
              {developer.firstname}<br/>{developer.lastname}
             </Heading>
-            <Text mb={4}>{developer.nickname1}<br/>{developer.nickname2}</Text>
-            <Link href={developer.github} isExternal>
+            <Text color='gray.500' mb={4}>{developer.nickname1}<br/>{developer.nickname2}</Text>
+            <Link href={developer.github} isExternal color='gray.500'>
               GitHub
             </Link>
           </Box>
