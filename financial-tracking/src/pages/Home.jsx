@@ -4,14 +4,10 @@ import Expenses from './Expenses';
 import Savings from './Savings';
 import Balance from './Balance';
 import Doughnut from './Doughnut';
-import SignUpButton from './SignUpButton';
 import IncomeTotal from './IncomeTotal';
 import ExpensesTotal from './ExpensesTotal';
-import DarkMode from './DarkMode';
 import Welcome from './Welcome';
-import { Flex, ChakraProvider, Spacer, Box, Heading, Text, Button, Divider, Stack, 
-    Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon
- } from '@chakra-ui/react';
+import { Flex, ChakraProvider, Spacer } from '@chakra-ui/react';
 
 function Home() {
     return (
@@ -37,10 +33,7 @@ function Home() {
                 <Doughnut />
                 <Balance />
                 </ChakraProvider>
-
         </div>
     )
 }
 export default Home
-
-// comment test

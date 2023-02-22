@@ -5,7 +5,7 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Flex, Box, Text } from "@ch
 function Navigation() {
   return (
     <Box bg="gray.100" borderBottom="1px solid" borderColor="gray.200">
-      <Flex justify="space-between" align="center" maxW="1200px" m="0 auto" py={2}>
+      <Flex justify="space-between" align="center" m="0 auto" py={2}>
         <Box>
           <Text fontSize="2xl" fontWeight="bold" color="green.500" ml={5}>Am I Rich Yet 💰 </Text>
         </Box>
