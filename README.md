@@ -18,6 +18,10 @@ This is a financial tracking app built using React, npm, chart.js, and chakra ui
 
 * [Deployed Page Link](https://chic-swan-b48b65.netlify.app/)
 
+    ![Deployed Page View showing welcome, signup button, and forms for income and expenses](/financial-tracking/src/images/Page%20overview%201.png)
+
+    ![Continued Deployed Page View showing visuals using chart.js including donut breakdown of savings and line graph](/financial-tracking/src/images/Page%20Overview%202.png)
+
 * [Git Page Link](https://github.com/LiliBear1/Financial-Tracking-App) 
 
 ## Getting Started
@@ -36,10 +40,13 @@ The financial tracking app includes the following features:
 
 ### Income
 The Income Form component allows users to add or edit their income. Users can input the source of their income and the amount. Once the form is submitted, the new income will be added to the table below.
+
+![Income Form](/financial-tracking/src/images/Income%20Form.png)
 <br></br>
 
 ### Income Table
 The Income Table component displays a table of all the user's income, including the source and amount. Users can delete any income entry by clicking on the respective icon in the table.
+
 
 Future enhancement options will include having a date stamp and edit option.
 <br></br>
@@ -59,9 +66,15 @@ The Chart component displays a visual representation of the user's income and ex
 <br></br>
 
 
-### Sign up
+### Sign Up
 The Sign Up option at the top of the page allows users to create a new account. Users will need to input their email address and a password, and confirm their password to create an account. 
 <br></br>
+
+### Dark Mode
+We have included an additional Dark Mode feature for those who prefer to live life on the dark side.
+
+### Navigation Bar
+The Navigation Bar allows users to individually select the income and expense form as well as view the savings, this may be helpful for users who don't like seeing too much on one screen or find it distracting.
 
 ## Technologies
 
