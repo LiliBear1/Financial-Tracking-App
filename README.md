@@ -119,13 +119,13 @@ This project follows an agile dvelopment process, we broke down the project into
 ### Roadmaps, Wireframes, Standups and the MVP
 At the very start of the project our aim was to have an MVP in place by a set date. In order to do this, we made sure we had a roadmap to follow and developed a wireframe for our project.  This kept us on track and allowed us to work quickly and efficiently as well as towards a goal of developing the MVP. 
 
-We kept notes on what had been achieved in the previous day so that we could look back at this as well as the Roadmap to measure our progress and we discussed these in our standups including outlining any bugs or issues we may be facing. 
+![Roadmap](/financial-tracking/src/images/FinTrack_Roadmap.png)
 
 The wireframe helped us plan out our builds better as we had an idea of how we wanted the page to look.
 
-![Roadmap](/financial-tracking/src/images/FinTrack_Roadmap.png)
-
 ![Wireframe](/financial-tracking/src/images/Wireframe.png)
+
+We kept notes on what had been achieved in the previous day so that we could look back at this as well as the Roadmap to measure our progress and we discussed these in our standups including outlining any bugs or issues we may be facing. 
 
 ![Standup Notes Example](/financial-tracking/src/images/Standup.png)
 <br></br>
