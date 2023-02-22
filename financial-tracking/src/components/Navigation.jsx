@@ -7,9 +7,9 @@ function Navigation() {
     <Box bg="gray.100" borderBottom="1px solid" borderColor="gray.200">
       <Flex justify="space-between" align="center" m="0 auto" py={2}>
         <Box>
-          <Text fontSize="2xl" fontWeight="bold" color="green.500" ml={5}>Am I Rich Yet 💰 </Text>
+          <Text fontSize="2xl" fontWeight="bold" color="green.500" ml={5} >Am I Rich Yet 💰 </Text>
         </Box>
-        <Box>
+        <Box mr={5}>
           <Breadcrumb separator="-">
             <BreadcrumbItem>
               <BreadcrumbLink as={Link} to="/" fontSize="lg" fontWeight="medium" color="gray.500">Home</BreadcrumbLink>
