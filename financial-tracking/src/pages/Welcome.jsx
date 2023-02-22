@@ -2,7 +2,7 @@ import SignUpButton from './SignUpButton';
 import DarkMode from './DarkMode';
 import {
     Flex, Box, Heading, Text, Image,
-    Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon
+    Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, SimpleGrid, Card, CardBody
 } from "@chakra-ui/react";
 
 function Welcome() {
@@ -18,17 +18,55 @@ function Welcome() {
                     <AccordionItem>
                         <AccordionButton>
                             <Box as="span" flex='1' textAlign='left'>
-                                <Heading mb={2} as='h3' size='lg'>How does it work?</Heading>
+                                <Heading color='blue' mb={2} as='h3' size='lg'>How does it work?</Heading>
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
                         <AccordionPanel >
-                            <li>Keep track of your income, expenses, and savings all in one place</li>
-                            <li> Categorise your entries to easily see where your money is going</li>
-                            <li>See a summary of your finances at a glance, including your total income, expenses, and savings</li>
-                            <li>Visualize your spending and saving habits with easy-to-read charts and graphs</li>
-                            <li>Save your financial data locally, so you can access it whenever you need it</li>
-                            <li>With this app, you'll be able to take control of your finances and make better decisions about your money.</li>
+ <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))' mb='10px'>
+  <Card borderRadius='3xl'>
+    <CardBody>
+    <Image src="rocket.png" alt="rocket" h='10vh'/>
+      <Text>Keep track of your income, expenses, and savings all in one place</Text>
+    </CardBody>
+  </Card>
+
+  <Card borderRadius='3xl'>
+  <CardBody>
+    <Image src="catergory.png" alt="catergory" h='10vh'/>
+      <Text>Categorise your entries to easily see where your money is going</Text>
+    </CardBody>
+  </Card>
+
+  <Card borderRadius='3xl'>
+   <CardBody>
+   <Image src="star.png" alt="star" h='10vh'/>
+      <Text>See a summary of your finances at a glance, including your total income, expenses, and savings</Text>
+    </CardBody>
+  </Card>
+
+  <Card borderRadius='3xl'>
+   <CardBody>
+   <Image src="charts.png" alt="charts" h='10vh'/>
+      <Text>Visualize your spending and saving habits with easy-to-read charts and graphs</Text>
+    </CardBody>
+  </Card>
+
+  <Card borderRadius='3xl'>
+   <CardBody>
+   <Image src="folder.png" alt="folder" h='10vh'/>
+      <Text>Save your financial data locally, so you can access it whenever you need it</Text>
+    </CardBody>
+  </Card>
+
+  <Card borderRadius='3xl'>
+   <CardBody>
+   <Image src="money.png" alt="money" h='10vh'/>
+      <Text>With this app, you'll be able to take control of your finances and make better decisions about your money.</Text>
+    </CardBody>
+  </Card>
+
+</SimpleGrid>
                             <li><strong>Start making smarter money decisions today!</strong></li>
                         </AccordionPanel>
                     </AccordionItem>
