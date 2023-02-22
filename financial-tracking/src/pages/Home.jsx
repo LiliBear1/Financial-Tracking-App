@@ -7,6 +7,7 @@ import Doughnut from './Doughnut';
 import IncomeTotal from './IncomeTotal';
 import ExpensesTotal from './ExpensesTotal';
 import Welcome from './Welcome';
+import Contact from './Contact';
 import { Flex, ChakraProvider, Spacer } from '@chakra-ui/react';
 
 function Home() {
@@ -32,6 +33,7 @@ function Home() {
                 
                 <Doughnut />
                 <Balance />
+                <Contact />
                 </ChakraProvider>
         </div>
     )
