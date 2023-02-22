@@ -87,7 +87,7 @@ function Income() {
                 </FormControl>
 
                 {/* === Save Button === */}
-                <Button colorScheme="green" mt="4" onClick={handleSave}>
+                <Button colorScheme="green" mt="4" onClick={handleSave} w='100%'>
                     Save
                 </Button>
             </form>
